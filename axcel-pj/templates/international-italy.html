@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ content.html_title }} &ndash; Axcel Partners</title>
+
+  {{ standard_header_includes }}
+
+  {# Google Fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800;900&family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  {# Font Awesome #}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {# Theme CSS #}
+  <link rel="stylesheet" href="{{ get_asset_url('axcel-pj/css/main.css') }}">
+</head>
+
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header">
+
+  {# Top Bar #}
+  <div class="header-topbar">
+    <div class="container">
+      <span class="topbar-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:0144900502">+33 (0)1 44 90 05 02</a>
+      </span>
+      <span class="topbar-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contact@axcelpartners.co">contact@axcelpartners.co</a>
+      </span>
+      <span class="topbar-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/company/axcel-partners/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </div>
+
+  {# Main Nav #}
+  <div class="header-main">
+    <div class="container">
+      <div class="site-logo">
+        <a href="/">
+          <img src="https://axcelpartners.co/wp-content/uploads/2021/04/logo-axcelpartners-loop.png" alt="Axcel Partners">
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="/qui-sommes-nous">Chi siamo</a></li>
+          <li class="menu-item-has-children">
+            <a href="#">Aree di intervento</a>
+            <ul class="sub-menu">
+              <li><a href="/domaines-dintervention/amelioration-de-la-performance-et-de-la-transformations">Miglioramento Performance e Trasformazione</a></li>
+              <li><a href="/domaines-dintervention/continuite-des-operations">Continuità delle Operazioni</a></li>
+              <li><a href="/domaines-dintervention/grands-projets-et-programmes">Grandi Progetti e Programmi</a></li>
+              <li><a href="/domaines-dintervention/restructuration-et-gestion-de-crise">Ristrutturazione e Gestione Crisi</a></li>
+              <li><a href="/domaines-dintervention/support-au-private-equity">Support al Private Equity</a></li>
+              <li><a href="/domaines-dintervention/transformation-numerique">Trasformazione Digitale</a></li>
+              <li><a href="/domaines-dintervention/deploiement-de-strategie">Deployment Strategico</a></li>
+              <li><a href="/domaines-dintervention/ressources-humaines">Risorse Umane</a></li>
+              <li><a href="/domaines-dintervention/finance-controle-de-gestion">Finance &amp; Controllo di Gestione</a></li>
+              <li><a href="/domaines-dintervention/informatique">Sistemi Informativi</a></li>
+            </ul>
+          </li>
+          <li><a href="/nous-rejoindre">Unisciti a noi</a></li>
+          <li class="menu-item-has-children current">
+            <a href="#">International</a>
+            <ul class="sub-menu">
+              <li><a href="/international/allemagne">Germania</a></li>
+              <li><a href="/international/bresil">Brasile</a></li>
+              <li><a href="/international/chine">Cina</a></li>
+              <li><a href="/international/france">Francia</a></li>
+              <li><a href="/international/italie">Italia</a></li>
+              <li><a href="/international/scandinavie">Scandinavia</a></li>
+            </ul>
+          </li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contacts">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+<!-- ============================================================
+     HERO — TITOLO PAGINA
+     ============================================================ -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Il nostro team <span>italiano</span></h1>
+    <span class="page-slogan">we will help you to build a dream</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     INDIRIZZO
+     ============================================================ -->
+<div class="address-section">
+  <div class="container">
+    <div class="divider-line"></div>
+    <div class="address-item">
+      <i class="fas fa-map-pin"></i>
+      <span>Via della Moscova 3, 20121 Milano</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SEZIONE APPROCCIO (testo + immagine)
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-text">
+        <div class="ot-heading">
+          <span>[ Il nostro approccio ]</span>
+          <h2 class="main-heading">Siamo presenti in Italia con il nostro ufficio di Milano</h2>
+        </div>
+        <p>Offriamo Accelerazione ed Eccellenza all'esecuzione dei tuoi Progetti con i Senior Manager del nostro Talent Pool internazionale e italiano. Oltre alle nostre linee di prodotto principali, supportiamo la Grande, Media e Piccola Impresa con:</p>
+        <ul>
+          <li>Introduzione graduale alla Digitalizzazione</li>
+          <li>Customer Experience e Digital Marketing</li>
+          <li>Industria 4.0</li>
+          <li>Percepiti come i migliori dai propri clienti: 'get perceived #1'</li>
+          <li>Revisione del Parco Fornitori e Dual Sourcing (oppure re-sourcing)</li>
+          <li>M&amp;A o Partnership? In Italia, in Europa, nel Mondo</li>
+          <li>Revisione del Modello di Business e Riorganizzazione</li>
+        </ul>
+      </div>
+      <div class="col-image">
+        <img src="https://axcelpartners.co/wp-content/uploads/2021/03/les-engagements-axcel-partners-excellence-1.png" alt="Axcel Partners Excellence">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEZIONE PROPOSTA (immagine + testo)
+     ============================================================ -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="row reverse">
+      <div class="col-image">
+        <img src="https://axcelpartners.co/wp-content/uploads/2021/03/axcel-partners-amelioration-performance-transformation-expertise-rvb.jpg" alt="Axcel Partners Performance">
+      </div>
+      <div class="col-text">
+        <div class="ot-heading is-dots">
+          <span>[ Competenza al vostro servizio ]</span>
+          <h2 class="main-heading">La nostra proposta</h2>
+        </div>
+        <p>Che supportiamo con competenze specifiche:</p>
+        <ul>
+          <li>Diamo forza alle tue ambizioni di crescita all'EXPORT sia con Metodi Tradizionali che Digitali</li>
+          <li>Ti supportiamo nel CAMBIO GENERAZIONALE</li>
+          <li>Definiamo con te la giusta Organizzazione Manageriale offrendoti più tempo per pensare al futuro della tua creatura</li>
+          <li>Discutiamo con te il tuo Piano Strategico</li>
+          <li>Verifichiamo la Capacità di innovare della tua azienda</li>
+        </ul>
+        <p>&hellip;e ti possiamo supportare a identificare i giusti finanziamenti per supportare l'evoluzione delle competenze e dei processi della tua azienda</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section class="team-section">
+  <div class="container">
+    <div class="ot-heading is-dots theratio-align-center">
+      <span>[ Esperti certificati ]</span>
+      <h2 class="main-heading">Scopri il nostro team</h2>
+    </div>
+
+    {# ── Riga 1: Partners ── #}
+    <div class="team-grid">
+
+      {# Giorgio BERETTA #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-beretta">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2024/06/axcel-portrait-Giorgio-Beretta.png" alt="Giorgio Beretta" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-beretta">Giorgio BERETTA</a></h2>
+          <p class="profile-designation">Partner</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+        <div class="profile-footer">
+          <a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Giorgio_Beretta-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+
+      {# Marco E. BINI #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-bini">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2025/11/axcel-portrait-M.Bini-site.jpeg" alt="Marco Bini" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-bini">Marco E. BINI</a></h2>
+          <p class="profile-designation">Partner</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+        <div class="profile-footer">
+          <a href="https://axcelpartners.co/wp-content/uploads/2025/11/BIO_Marco_E_Bini-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+
+      {# Diego CHINNI #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-chinni">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2024/06/axcel-portrait-Diego-Chinni.png" alt="Diego Chinni" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-chinni">Diego CHINNI</a></h2>
+          <p class="profile-designation">Partner</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+        <div class="profile-footer">
+          <a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Diego_Chinni-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+
+    </div>{# /team-grid row 1 #}
+
+    {# ── Riga 2 ── #}
+    <div class="team-grid" style="margin-top:30px">
+
+      {# Giuseppe DELL'ACQUA #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-dellacqua">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2025/11/axcel-portrait-G.DellAcqua-site.jpeg" alt="Giuseppe Dell'Acqua" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-dellacqua">Giuseppe (Pippo) DELL'ACQUA</a></h2>
+          <p class="profile-designation">Partner</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+        <div class="profile-footer">
+          <a href="https://axcelpartners.co/wp-content/uploads/2025/11/BIO_Giuseppe_DellAcqua-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+
+      {# Giorgio MAGNAGHI #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-magnaghi">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2024/06/axcel-portrait-Giorgio-Magnaghi.png" alt="Giorgio Magnaghi" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-magnaghi">Giorgio MAGNAGHI</a></h2>
+          <p class="profile-designation">Partner</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+        <div class="profile-footer">
+          <a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Giorgio_Magnaghi-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+
+      {# Giandomenico RIVETTI #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-rivetti">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2021/04/axcel-portraits-gandomenico.jpg" alt="Giandomenico Rivetti" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-rivetti">Giandomenico RIVETTI</a></h2>
+          <p class="profile-designation">Managing Partner</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+        <div class="profile-footer">
+          <a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Giandomenico_Rivetti-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+
+    </div>{# /team-grid row 2 #}
+
+    {# ── Riga 3: Senior Advisors ── #}
+    <div class="team-grid" style="margin-top:30px">
+
+      {# Giuseppe DI MARCO #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-dimarco">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2021/04/axcel-portraits-giuseppe-di-marco.png" alt="Giuseppe Di Marco" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-dimarco">Giuseppe DI MARCO</a></h2>
+          <p class="profile-designation">Senior Advisor</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+      </div>
+
+      {# Giuliano MONIZZA #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-monizza">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2021/04/axcel-portraits-giuliano-monizza.jpg" alt="Giuliano Monizza" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-monizza">Giuliano MONIZZA</a></h2>
+          <p class="profile-designation">Senior Advisor</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+      </div>
+
+      {# Stefano PORETTA #}
+      <div class="profile-card">
+        <a href="#" data-modal-target="modal-poretta">
+          <div class="profile-header">
+            <img src="https://axcelpartners.co/wp-content/uploads/2024/07/axcel-portrait-Stefano-Poretta.png" alt="Stefano Poretta" loading="lazy">
+            <div class="overlay-img"><i class="fas fa-plus"></i></div>
+          </div>
+        </a>
+        <div class="profile-body">
+          <h2 class="profile-title"><a href="#" data-modal-target="modal-poretta">Stefano PORETTA</a></h2>
+          <p class="profile-designation">Senior Advisor</p>
+          <p class="profile-content">AXCEL Partners Italy</p>
+        </div>
+      </div>
+
+    </div>{# /team-grid row 3 #}
+  </div>
+</section>
+
+<!-- ============================================================
+     MODALI TEAM
+     ============================================================ -->
+
+{# Modal: Giorgio Beretta #}
+<div id="modal-beretta" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2024/06/axcel-portrait-Giorgio-Beretta.png" alt="Giorgio Beretta"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Giorgio BERETTA</h2>
+        <p class="team-modal-position">Partner</p>
+        <div class="team-modal-content">Giorgio has over 40 years of experience primarily as a financial consultant. He has supported and executed numerous fundraising operations. He has developed his career in various sectors: Fashion, Oil &amp; Gas, Banking, and Telecommunications.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:g.beretta@axcelpartners.co">g.beretta@axcelpartners.co</a></li></ul>
+        <div class="team-modal-actions"><a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Giorgio_Beretta-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Marco Bini #}
+<div id="modal-bini" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2025/11/axcel-portrait-M.Bini-site.jpeg" alt="Marco Bini"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Marco E. BINI</h2>
+        <p class="team-modal-position">Partner</p>
+        <div class="team-modal-content">Marco has over 25 years of international experience in leadership roles across the Luxury, Fashion, and Retail industries. Throughout his career, he has successfully guided companies through phases of strategic growth, business transformation, and organizational restructuring.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:m.bini@axcelpartners.co">m.bini@axcelpartners.co</a></li></ul>
+        <div class="team-modal-actions"><a href="https://axcelpartners.co/wp-content/uploads/2025/11/BIO_Marco_E_Bini-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Diego Chinni #}
+<div id="modal-chinni" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2024/06/axcel-portrait-Diego-Chinni.png" alt="Diego Chinni"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Diego CHINNI</h2>
+        <p class="team-modal-position">Partner</p>
+        <div class="team-modal-content">Diego has over 25 years of experience in management, holding various positions within BNP Paribas and BMW groups as well as in consulting firms in the financial services and automotive sectors. He has extensive experience as a general manager and consultant, particularly in sales, marketing and strategy, with a focus on new technologies.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:d.chinni@axcelpartners.co">d.chinni@axcelpartners.co</a></li></ul>
+        <div class="team-modal-actions"><a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Diego_Chinni-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Giuseppe Dell'Acqua #}
+<div id="modal-dellacqua" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2025/11/axcel-portrait-G.DellAcqua-site.jpeg" alt="Giuseppe Dell'Acqua"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Giuseppe (Pippo) DELL'ACQUA</h2>
+        <p class="team-modal-position">Partner</p>
+        <div class="team-modal-content">Pippo has over 35 years of experience in legal consulting. He has worked in a leading Italian and international law firm as equity partner, developing in-depth expertise in Health law and Life sciences, Commercial and Corporate law, Corporate governance and compliance, International contracts.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:g.dellacqua@axcelpartners.co">g.dellacqua@axcelpartners.co</a></li></ul>
+        <div class="team-modal-actions"><a href="https://axcelpartners.co/wp-content/uploads/2025/11/BIO_Giuseppe_DellAcqua-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Giorgio Magnaghi #}
+<div id="modal-magnaghi" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2024/06/axcel-portrait-Giorgio-Magnaghi.png" alt="Giorgio Magnaghi"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Giorgio MAGNAGHI</h2>
+        <p class="team-modal-position">Partner</p>
+        <div class="team-modal-content">Giorgio has over 25 years of experience in developing medium-size companies in the chemical sector, with both an entrepreneurial and multinational approach. He has a strong inclination towards innovation, sustainable growth, and efficiency.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:g.magnaghi@axcelpartners.co">g.magnaghi@axcelpartners.co</a></li></ul>
+        <div class="team-modal-actions"><a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Giorgio_Magnaghi-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Giandomenico Rivetti #}
+<div id="modal-rivetti" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2021/04/axcel-portraits-gandomenico.jpg" alt="Giandomenico Rivetti"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Giandomenico RIVETTI</h2>
+        <p class="team-modal-position">Managing Partner</p>
+        <div class="team-modal-content">Giandomenico has 34 years' experience in ABB as Head of regional and global businesses with P&amp;L responsibilities. He has led large global R&amp;D organizations and has recently obtained an MBA in Digital Business.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:g.rivetti@axcelpartners.co">g.rivetti@axcelpartners.co</a></li></ul>
+        <div class="team-modal-actions"><a href="https://axcelpartners.co/wp-content/uploads/2024/06/BIO_Giandomenico_Rivetti-EN.pdf" target="_blank"><i class="fas fa-file"></i> CV</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Giuseppe Di Marco #}
+<div id="modal-dimarco" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2021/04/axcel-portraits-giuseppe-di-marco.png" alt="Giuseppe Di Marco"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Giuseppe DI MARCO</h2>
+        <p class="team-modal-position">Senior Advisor</p>
+        <div class="team-modal-content">Giuseppe is a leader with an important strategic vision and thirty years' experience in the construction of complex infrastructures, in Power Generation, Transmission of Electricity and execution of industrial projects in the Mining, Oil &amp; Gas, Metallurgical, Pulp &amp; Paper sectors. He is a Civil Engineer with a Bachelor's degree from the University of the Witwatersrand in Johannesburg.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:g.dimarco@axcelpartners.co">g.dimarco@axcelpartners.co</a></li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Giuliano Monizza #}
+<div id="modal-monizza" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2021/04/axcel-portraits-giuliano-monizza.jpg" alt="Giuliano Monizza"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Giuliano MONIZZA</h2>
+        <p class="team-modal-position">Senior Advisor</p>
+        <div class="team-modal-content">Giuliano covered managerial roles in Project Management and Marketing &amp; Sales in world leaders in Generation, Transmission and Distribution of electricity. He was Group VP - EPC Manager, Vice President of Confindustria ANIE, and founder of GIMO Innovation Srl. Electrical engineer with a Master's Degree from the University of Pavia.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:gimoinnovation@gmail.com">gimoinnovation@gmail.com</a></li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal: Stefano Poretta #}
+<div id="modal-poretta" class="team-modal-overlay" role="dialog" aria-modal="true">
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi"><i class="fas fa-times"></i></button>
+    <div class="team-modal-body">
+      <div class="team-modal-img"><img src="https://axcelpartners.co/wp-content/uploads/2024/07/axcel-portrait-Stefano-Poretta.png" alt="Stefano Poretta"></div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">Stefano PORETTA</h2>
+        <p class="team-modal-position">Senior Advisor</p>
+        <div class="team-modal-content">Stefano held roles at CESI spa (Enel group) and ABB Ricerca spa. He founded and directed Comonext, a Science and Technology Park hosting ~120 companies, supporting them in innovation and fundraising. Electronic engineer at the Polytechnic of Milan with an MBA from Bocconi University.</div>
+        <ul class="team-modal-list"><li><strong>Email:</strong> <a href="mailto:s.poretta@axcelpartners.co">s.poretta@axcelpartners.co</a></li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PROGETTI PIÙ RICHIESTI (flip boxes)
+     ============================================================ -->
+<section class="projects-section">
+  <div class="container">
+    <div class="ot-heading is-dots theratio-align-center">
+      <span>[ Scoprire ]</span>
+      <h2 class="main-heading">I progetti più richiesti</h2>
+    </div>
+    <div class="flip-grid">
+
+      <div class="support-box">
+        <div class="inner-box">
+          <div class="overlay flex-middle">
+            <p>Un nostro Senior Manager, grande esperto in Qualità sta supportando un'azienda leader italiana nella ridefinizione della propria organizzazione di Qualità per renderla leader anche nella Qualità Percepita dai propri clienti.</p>
+          </div>
+          <div class="content-box">
+            <img src="https://axcelpartners.co/wp-content/uploads/2021/04/bg-iconbox5-hover.jpg" alt="">
+            <div class="icon-title">
+              <span class="fas fa-file"></span>
+              <h5>Diventare Leader nella Qualità Percepita</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-box">
+        <div class="inner-box">
+          <div class="overlay flex-middle">
+            <p>Supportiamo le aziende nel migliorare la Customer Experience e nel posizionarsi come leader percepiti dai propri clienti attraverso strategie digitali e tradizionali.</p>
+          </div>
+          <div class="content-box">
+            <img src="https://axcelpartners.co/wp-content/uploads/2021/04/bg-iconbox5-hover-1.jpg" alt="">
+            <div class="icon-title">
+              <span class="fas fa-file"></span>
+              <h5>Customer Experience e 'get perceived #1'</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-box">
+        <div class="inner-box">
+          <div class="overlay flex-middle">
+            <p>Supportiamo le aziende nel trasformare la gestione delle Risorse Umane da semplice amministrazione del personale a leva strategica di crescita.</p>
+          </div>
+          <div class="content-box">
+            <img src="https://axcelpartners.co/wp-content/uploads/2021/04/bg-iconbox5-hover.jpg" alt="">
+            <div class="icon-title">
+              <span class="fas fa-file"></span>
+              <h5>Non solo Amministrazione del Personale: la Gestione delle Risorse Umane</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA + FORM CONTATTO
+     ============================================================ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="ot-heading is-dots theratio-align-center">
+      <span>[ Nuove sfide ]</span>
+      <h2 class="main-heading">Hai un progetto in mente che ti sta a cuore?</h2>
+    </div>
+
+    <div style="margin-top:24px">
+      <button id="show-contact-form" class="btn btn-dark">Parliamone!</button>
+    </div>
+
+    <div id="contact-form-wrap" class="contact-form-wrap">
+      <form id="axcel-contact-form"
+            data-portal-id=""
+            data-form-guid="">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="firstname" class="form-control" placeholder="Nome *" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="lastname" class="form-control" placeholder="Cognome *" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email *" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" class="form-control" placeholder="Telefono">
+          </div>
+        </div>
+        <textarea name="message" class="form-control full" placeholder="Il tuo messaggio..." rows="6"></textarea>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-dark">Invia il tuo messaggio</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<a id="back-to-top" href="#" aria-label="Torna su">
+  <i class="fas fa-chevron-up" style="transform:none"></i>
+</a>
+
+{{ standard_footer_includes }}
+<script src="{{ get_asset_url('axcel-pj/js/main.js') }}"></script>
+
+</body>
+</html>
