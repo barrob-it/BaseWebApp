@@ -188,6 +188,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
   display: flex;
   flex-direction: column;
+  background-image: url(https://axcelpartners.co/wp-content/uploads/2021/04/international-italia-milano.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
