@@ -1,0 +1,99 @@
+{% set modal_id = "team-modal-" ~ module.name|lower|replace(" ", "-") ~ "-" ~ loop.index|default(content.id) %}
+
+<div class="profile-card">
+
+  {# ── Card ── #}
+  <a href="#" data-modal-target="{{ modal_id }}" aria-label="Apri profilo di {{ module.name }}">
+    <div class="profile-header">
+      {% if module.photo.src %}
+        <img
+          src="{{ module.photo.src }}"
+          alt="{{ module.photo.alt|default(module.name) }}"
+          loading="lazy"
+        />
+      {% else %}
+        <img
+          src="https://via.placeholder.com/300x300?text={{ module.name|urlencode }}"
+          alt="{{ module.name }}"
+          loading="lazy"
+        />
+      {% endif %}
+      <div class="overlay-img">
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      </div>
+    </div>
+  </a>
+
+  <div class="profile-body">
+    <h2 class="profile-title">
+      <a href="#" data-modal-target="{{ modal_id }}">{{ module.name }}</a>
+    </h2>
+    {% if module.designation %}
+      <p class="profile-designation">{{ module.designation }}</p>
+    {% endif %}
+    {% if module.company %}
+      <p class="profile-content">{{ module.company }}</p>
+    {% endif %}
+  </div>
+
+  {% if module.cv_url.url %}
+    <div class="profile-footer">
+      <a href="{{ module.cv_url.url }}" target="_blank" rel="noopener" aria-label="CV di {{ module.name }}">
+        <i class="fas fa-file" aria-hidden="true"></i> CV
+      </a>
+    </div>
+  {% endif %}
+
+</div>
+
+{# ── Modal Popup ── #}
+<div
+  id="{{ modal_id }}"
+  class="team-modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Profilo di {{ module.name }}"
+>
+  <div class="team-modal">
+    <button class="team-modal-close" aria-label="Chiudi">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <div class="team-modal-body">
+      <div class="team-modal-img">
+        {% if module.photo.src %}
+          <img
+            src="{{ module.photo.src }}"
+            alt="{{ module.photo.alt|default(module.name) }}"
+            loading="lazy"
+          />
+        {% endif %}
+      </div>
+      <div class="team-modal-info">
+        <h2 class="team-modal-title">{{ module.name }}</h2>
+        {% if module.designation %}
+          <p class="team-modal-position">{{ module.designation }}</p>
+        {% endif %}
+        {% if module.bio %}
+          <div class="team-modal-content">{{ module.bio }}</div>
+        {% endif %}
+        <ul class="team-modal-list">
+          {% if module.email %}
+            <li><strong>Email:</strong> <a href="mailto:{{ module.email }}">{{ module.email }}</a></li>
+          {% endif %}
+        </ul>
+        <div class="team-modal-actions">
+          {% if module.cv_url.url %}
+            <a href="{{ module.cv_url.url }}" target="_blank" rel="noopener">
+              <i class="fas fa-file" aria-hidden="true"></i> CV
+            </a>
+          {% endif %}
+          {% if module.linkedin_url.url %}
+            <a href="{{ module.linkedin_url.url }}" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

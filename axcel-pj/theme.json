@@ -1,0 +1,58 @@
+{
+  "label": "Axcel Partners Theme",
+  "preview_path": "templates/international-italy.html",
+  "screenshot_path": "",
+  "enable_domain_stylesheets": false,
+  "hide_preview_placeholder_image": false,
+  "version": "1.0.0",
+  "author": {
+    "name": "Axcel Partners"
+  },
+  "documentation": "",
+  "settings": {
+    "typography": [
+      {
+        "id": "heading_font",
+        "label": "Heading Font",
+        "css_variable": "--heading-font",
+        "type": "font",
+        "default": {
+          "font": "Raleway",
+          "fallback": "sans-serif",
+          "google_font": true
+        }
+      },
+      {
+        "id": "body_font",
+        "label": "Body Font",
+        "css_variable": "--body-font",
+        "type": "font",
+        "default": {
+          "font": "Titillium Web",
+          "fallback": "sans-serif",
+          "google_font": true
+        }
+      }
+    ],
+    "colors": [
+      {
+        "id": "primary_color",
+        "label": "Primary Color",
+        "css_variable": "--color-primary",
+        "default": "#1a1a1a"
+      },
+      {
+        "id": "accent_color",
+        "label": "Accent / Gold Color",
+        "css_variable": "--color-accent",
+        "default": "#DEC180"
+      },
+      {
+        "id": "body_text_color",
+        "label": "Body Text Color",
+        "css_variable": "--color-body",
+        "default": "#555555"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "photo",
+    "name": "photo",
+    "label": "Photo",
+    "type": "image",
+    "required": false,
+    "default": {
+      "src": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "name",
+    "name": "name",
+    "label": "Full Name",
+    "type": "text",
+    "required": true,
+    "default": "First LAST"
+  },
+  {
+    "id": "designation",
+    "name": "designation",
+    "label": "Role / Title",
+    "type": "text",
+    "required": false,
+    "default": "Partner"
+  },
+  {
+    "id": "company",
+    "name": "company",
+    "label": "Company Line",
+    "type": "text",
+    "required": false,
+    "default": "AXCEL Partners Italy"
+  },
+  {
+    "id": "bio",
+    "name": "bio",
+    "label": "Biography",
+    "type": "richtext",
+    "required": false,
+    "default": ""
+  },
+  {
+    "id": "email",
+    "name": "email",
+    "label": "Email Address",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "id": "cv_url",
+    "name": "cv_url",
+    "label": "CV / PDF URL",
+    "type": "url",
+    "required": false,
+    "default": {
+      "url": "",
+      "open_in_new_tab": true
+    }
+  },
+  {
+    "id": "linkedin_url",
+    "name": "linkedin_url",
+    "label": "LinkedIn URL",
+    "type": "url",
+    "required": false,
+    "default": {
+      "url": "",
+      "open_in_new_tab": true
+    }
+  }
+]
