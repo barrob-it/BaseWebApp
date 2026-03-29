@@ -124,7 +124,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   gap: 30px;
 }
-.site-logo img { height: 50px; width: auto; }
+.site-logo img { height: 68px; width: auto; }
 
 /* Navigation */
 .main-nav ul { display: flex; align-items: center; gap: 0; }
@@ -184,7 +184,7 @@ img { max-width: 100%; height: auto; display: block; }
    PAGE HERO / TITLE SECTION
    ============================================================ */
 .page-hero {
-  min-height: 460px;
+  min-height: 560px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -213,8 +213,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* warm sandy band at bottom of hero with address */
 .hero-address-band {
-  background: rgba(214, 204, 186, 0.88);
-  padding: 14px 0;
+  background: rgba(214, 204, 186, 0.92);
+  padding: 22px 0;
 }
 .hero-address-band .container {
   display: flex;
@@ -279,7 +279,7 @@ img { max-width: 100%; height: auto; display: block; }
    ============================================================ */
 .section { padding: 80px 0; }
 .section-gray { background: var(--color-bg-light); }
-.section-gold { background: #c9a96e; }
+.section-gold { background: #d6bb82; }
 .section-gold .ot-heading > span { color: rgba(255,255,255,0.75); }
 .section-gold .ot-heading .main-heading { color: #ffffff; }
 .section-gold .col-text p,
