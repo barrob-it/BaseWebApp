@@ -86,7 +86,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Top Bar */
 .header-topbar {
-  background: #f5f5f5;
+  background: #ffffff;
   border-bottom: 1px solid var(--color-border);
   padding: 8px 0;
   font-size: 13px;
@@ -103,7 +103,7 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 6px;
   color: var(--color-body);
 }
-.topbar-item i { font-size: 14px; color: var(--color-accent); }
+.topbar-item i { font-size: 14px; color: var(--color-primary); }
 .topbar-item a { color: var(--color-body); }
 .topbar-item a:hover { color: var(--color-primary); }
 
@@ -116,7 +116,7 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 .header-main {
-  padding: 16px 0;
+  padding: 10px 0;
 }
 .header-main .container {
   display: flex;
@@ -124,7 +124,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   gap: 30px;
 }
-.site-logo img { height: 68px; width: auto; }
+.site-logo img { width: 170px; height: auto; }
 
 /* Navigation */
 .main-nav ul { display: flex; align-items: center; gap: 0; }
@@ -184,22 +184,18 @@ img { max-width: 100%; height: auto; display: block; }
    PAGE HERO / TITLE SECTION
    ============================================================ */
 .page-hero {
-  min-height: 560px;
+  min-height: 580px;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: block;
   background-image: url(https://axcelpartners.co/wp-content/uploads/2021/04/international-italia-milano.jpg);
   background-size: cover;
-  background-position: center top;
+  background-position: center 20%;
   background-repeat: no-repeat;
 }
 
-/* title area — top of hero, dark text */
+/* title area — top-left, dark text */
 .hero-inner {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 52px;
+  padding: 52px 0 180px;
 }
 .page-title {
   font-family: 'Titillium Web', sans-serif;
@@ -211,10 +207,14 @@ img { max-width: 100%; height: auto; display: block; }
 .page-title span { color: #1a1a1a; }
 .page-slogan { display: none; }
 
-/* warm sandy band at bottom of hero with address */
+/* address band — floats over hero, staccata dal fondo */
 .hero-address-band {
-  background: rgba(214, 204, 186, 0.92);
-  padding: 22px 0;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background: #D3CCC3;
+  padding: 26px 0;
 }
 .hero-address-band .container {
   display: flex;
@@ -224,7 +224,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-address-band .divider-line {
   width: 50px;
   height: 1px;
-  background: #7a6e5f;
+  background: #8a7e72;
   flex: none;
 }
 .hero-address-band .address-item {
@@ -235,7 +235,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: #4a4035;
   letter-spacing: 0.3px;
 }
-.hero-address-band .address-item i { font-size: 12px; color: #7a6e5f; }
+.hero-address-band .address-item i { font-size: 12px; color: #8a7e72; }
 
 /* ============================================================
    SECTION HEADING COMPONENT (.ot-heading)
