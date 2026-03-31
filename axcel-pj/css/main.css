@@ -184,12 +184,12 @@ img { max-width: 100%; height: auto; display: block; }
    PAGE HERO / TITLE SECTION
    ============================================================ */
 .page-hero {
-  min-height: 580px;
+  min-height: 483px;
   position: relative;
   display: block;
   background-image: url(https://axcelpartners.co/wp-content/uploads/2021/04/international-italia-milano.jpg);
   background-size: cover;
-  background-position: center 20%;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
@@ -207,12 +207,12 @@ img { max-width: 100%; height: auto; display: block; }
 .page-title span { color: #1a1a1a; }
 .page-slogan { display: none; }
 
-/* address band — floats over hero, staccata dal fondo */
+/* address band — floats over hero, staccata dal fondo, stops 1/5 before right edge */
 .hero-address-band {
   position: absolute;
   bottom: 60px;
   left: 0;
-  right: 0;
+  right: 20%;
   background: #D3CCC3;
   padding: 26px 0;
 }
