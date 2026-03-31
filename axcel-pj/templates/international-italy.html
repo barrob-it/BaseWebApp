@@ -109,7 +109,17 @@
   {# Titolo — in alto a sinistra, testo scuro #}
   <div class="hero-inner">
     <div class="container">
-      <h1 class="page-title">Il nostro team italiano</h1>
+      {% dnd_area "hero_title" label="Titolo Hero" %}
+        {% dnd_section padding={"top": 0, "bottom": 0} %}
+          {% dnd_column %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text", label="Titolo" %}
+                {% module_attribute "html" %}<h1 class="page-title">Il nostro team italiano</h1>{% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
     </div>
   </div>
 
@@ -134,23 +144,45 @@
   <div class="container">
     <div class="row">
       <div class="col-text">
-        <div class="ot-heading">
-          <span>[ Il nostro approccio ]</span>
-          <h2 class="main-heading">Siamo presenti in Italia con il nostro ufficio di Milano</h2>
-        </div>
-        <p>Offriamo Accelerazione ed Eccellenza all'esecuzione dei tuoi Progetti con i Senior Manager del nostro Talent Pool internazionale e italiano. Oltre alle nostre linee di prodotto principali, supportiamo la Grande, Media e Piccola Impresa con:</p>
-        <ul>
-          <li>Introduzione graduale alla Digitalizzazione</li>
-          <li>Customer Experience e Digital Marketing</li>
-          <li>Industria 4.0</li>
-          <li>Percepiti come i migliori dai propri clienti: 'get perceived #1'</li>
-          <li>Revisione del Parco Fornitori e Dual Sourcing (oppure re-sourcing)</li>
-          <li>M&amp;A o Partnership? In Italia, in Europa, nel Mondo</li>
-          <li>Revisione del Modello di Business e Riorganizzazione</li>
-        </ul>
+        {% dnd_area "approccio_text" label="Approccio — Testo" %}
+          {% dnd_section padding={"top": 0, "bottom": 0} %}
+            {% dnd_column %}
+              {% dnd_row %}
+                {% dnd_module path="@hubspot/rich_text", label="Testo Approccio" %}
+                  {% module_attribute "html" %}
+                    <div class="ot-heading">
+                      <span>[ Il nostro approccio ]</span>
+                      <h2 class="main-heading">Siamo presenti in Italia con il nostro ufficio di Milano</h2>
+                    </div>
+                    <p>Offriamo Accelerazione ed Eccellenza all'esecuzione dei tuoi Progetti con i Senior Manager del nostro Talent Pool internazionale e italiano. Oltre alle nostre linee di prodotto principali, supportiamo la Grande, Media e Piccola Impresa con:</p>
+                    <ul>
+                      <li>Introduzione graduale alla Digitalizzazione</li>
+                      <li>Customer Experience e Digital Marketing</li>
+                      <li>Industria 4.0</li>
+                      <li>Percepiti come i migliori dai propri clienti: 'get perceived #1'</li>
+                      <li>Revisione del Parco Fornitori e Dual Sourcing (oppure re-sourcing)</li>
+                      <li>M&amp;A o Partnership? In Italia, in Europa, nel Mondo</li>
+                      <li>Revisione del Modello di Business e Riorganizzazione</li>
+                    </ul>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_section %}
+        {% end_dnd_area %}
       </div>
       <div class="col-image">
-        <img src="https://axcelpartners.co/wp-content/uploads/2021/03/les-engagements-axcel-partners-excellence-1.png" alt="Axcel Partners Excellence">
+        {% dnd_area "approccio_img" label="Approccio — Immagine" %}
+          {% dnd_section padding={"top": 0, "bottom": 0} %}
+            {% dnd_column %}
+              {% dnd_row %}
+                {% dnd_module path="@hubspot/image", label="Immagine Approccio" %}
+                  {% module_attribute "img" %}{"src": "https://axcelpartners.co/wp-content/uploads/2021/03/les-engagements-axcel-partners-excellence-1.png", "alt": "Axcel Partners Excellence"}{% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_section %}
+        {% end_dnd_area %}
       </div>
     </div>
   </div>
@@ -164,23 +196,45 @@
     <div class="row">
       {# Immagine a SINISTRA #}
       <div class="col-image">
-        <img src="https://axcelpartners.co/wp-content/uploads/2021/03/axcel-partners-amelioration-performance-transformation-expertise-rvb.jpg" alt="Axcel Partners Performance">
+        {% dnd_area "proposta_img" label="Proposta — Immagine" %}
+          {% dnd_section padding={"top": 0, "bottom": 0} %}
+            {% dnd_column %}
+              {% dnd_row %}
+                {% dnd_module path="@hubspot/image", label="Immagine Proposta" %}
+                  {% module_attribute "img" %}{"src": "https://axcelpartners.co/wp-content/uploads/2021/03/axcel-partners-amelioration-performance-transformation-expertise-rvb.jpg", "alt": "Axcel Partners Performance"}{% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_section %}
+        {% end_dnd_area %}
       </div>
       {# Testo a DESTRA #}
       <div class="col-text">
-        <div class="ot-heading is-dots">
-          <span>[ Competenza al vostro servizio ]</span>
-          <h2 class="main-heading">La nostra proposta</h2>
-        </div>
-        <p>Che supportiamo con competenze specifiche:</p>
-        <ul>
-          <li>Diamo forza alle tue ambizioni di crescita all'EXPORT sia con Metodi Tradizionali che Digitali</li>
-          <li>Ti supportiamo nel CAMBIO GENERAZIONALE</li>
-          <li>Definiamo con te la giusta Organizzazione Manageriale offrendoti più tempo per pensare al futuro della tua creatura</li>
-          <li>Discutiamo con te il tuo Piano Strategico</li>
-          <li>Verifichiamo la Capacità di innovare della tua azienda</li>
-        </ul>
-        <p>&hellip;e ti possiamo supportare a identificare i giusti finanziamenti per supportare l'evoluzione delle competenze e dei processi della tua azienda</p>
+        {% dnd_area "proposta_text" label="Proposta — Testo" %}
+          {% dnd_section padding={"top": 0, "bottom": 0} %}
+            {% dnd_column %}
+              {% dnd_row %}
+                {% dnd_module path="@hubspot/rich_text", label="Testo Proposta" %}
+                  {% module_attribute "html" %}
+                    <div class="ot-heading is-dots">
+                      <span>[ Competenza al vostro servizio ]</span>
+                      <h2 class="main-heading">La nostra proposta</h2>
+                    </div>
+                    <p>Che supportiamo con competenze specifiche:</p>
+                    <ul>
+                      <li>Diamo forza alle tue ambizioni di crescita all'EXPORT sia con Metodi Tradizionali che Digitali</li>
+                      <li>Ti supportiamo nel CAMBIO GENERAZIONALE</li>
+                      <li>Definiamo con te la giusta Organizzazione Manageriale offrendoti più tempo per pensare al futuro della tua creatura</li>
+                      <li>Discutiamo con te il tuo Piano Strategico</li>
+                      <li>Verifichiamo la Capacità di innovare della tua azienda</li>
+                    </ul>
+                    <p>&hellip;e ti possiamo supportare a identificare i giusti finanziamenti per supportare l'evoluzione delle competenze e dei processi della tua azienda</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_section %}
+        {% end_dnd_area %}
       </div>
     </div>
   </div>
@@ -585,10 +639,22 @@
      ============================================================ -->
 <section class="cta-section">
   <div class="container">
-    <div class="ot-heading is-dots theratio-align-center">
-      <span>[ Nuove sfide ]</span>
-      <h2 class="main-heading">Hai un progetto in mente che ti sta a cuore?</h2>
-    </div>
+    {% dnd_area "cta_content" label="CTA — Testo" %}
+      {% dnd_section padding={"top": 0, "bottom": 0} %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module path="@hubspot/rich_text", label="Testo CTA" %}
+              {% module_attribute "html" %}
+                <div class="ot-heading is-dots theratio-align-center">
+                  <span>[ Nuove sfide ]</span>
+                  <h2 class="main-heading">Hai un progetto in mente che ti sta a cuore?</h2>
+                </div>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
 
     <div style="margin-top:24px">
       <button id="show-contact-form" class="btn btn-dark">Parliamone!</button>

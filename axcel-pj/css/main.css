@@ -742,6 +742,35 @@ textarea.form-control { resize: vertical; min-height: 140px; }
 .form-submit { margin-top: 10px; }
 
 /* ============================================================
+   HUBSPOT DND — reset wrappers nested in our HTML layout
+   ============================================================ */
+.col-text .dnd-section,
+.col-image .dnd-section,
+.hero-inner .dnd-section,
+.cta-section .dnd-section {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.col-text .dnd-column,
+.col-image .dnd-column,
+.hero-inner .dnd-column,
+.cta-section .dnd-column {
+  padding: 0 !important;
+}
+.col-text .dnd-row,
+.col-image .dnd-row,
+.hero-inner .dnd-row,
+.cta-section .dnd-row {
+  margin: 0 !important;
+}
+/* Image module fills container */
+.col-image .hs-image-widget { width: 100%; }
+.col-image .hs-image-widget img { width: 100%; height: auto; border-radius: 4px; }
+/* Hero DnD area transparent */
+.hero-inner .dnd-section { background: transparent !important; }
+
+/* ============================================================
    BACK TO TOP
    ============================================================ */
 #back-to-top {
