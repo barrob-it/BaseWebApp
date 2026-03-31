@@ -124,7 +124,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   gap: 30px;
 }
-.site-logo img { width: 128px; height: auto; }
+.site-logo img { width: 166px; height: auto; }
 
 /* Navigation */
 .main-nav ul { display: flex; align-items: center; gap: 0; }
