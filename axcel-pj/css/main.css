@@ -116,7 +116,7 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 .header-main {
-  padding: 10px 0;
+  padding: 6px 0;
 }
 .header-main .container {
   display: flex;
@@ -124,7 +124,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   gap: 30px;
 }
-.site-logo img { width: 170px; height: auto; }
+.site-logo img { width: 128px; height: auto; }
 
 /* Navigation */
 .main-nav ul { display: flex; align-items: center; gap: 0; }
