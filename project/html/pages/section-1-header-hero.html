@@ -1,0 +1,208 @@
+<!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  SEZIONE 1 – HEADER + HERO  |  ETL Italia               ║
+  ║                                                          ║
+  ║  ISTRUZIONI:                                             ║
+  ║  1. Carica hero-bg.png e etl-logo.png su HubSpot Files   ║
+  ║  2. Sostituisci HERO_IMAGE_URL e LOGO_URL qui sotto       ║
+  ║  3. Incolla questo codice nel file home-page.html         ║
+  ║     nel Design Manager → Publish changes                 ║
+  ╚══════════════════════════════════════════════════════════╝
+-->
+
+<!-- ── URL IMMAGINI – modifica qui ──────────────────────── -->
+{% set hero_url = "HERO_IMAGE_URL" %}
+{% set logo_url = "LOGO_URL" %}
+<!-- ──────────────────────────────────────────────────────── -->
+
+<style>
+
+/* ── Sezione 1 – reset ── */
+.etl-s1, .etl-s1 *, .etl-s1 *::before, .etl-s1 *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ══════════════════════════════════════
+   NAVIGAZIONE
+══════════════════════════════════════ */
+.etl-nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(8, 2, 2, 0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.etl-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo */
+.etl-nav__logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.etl-nav__logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Override stile HubSpot menu module */
+.etl-nav .hs-menu-wrapper > ul {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.etl-nav .hs-menu-wrapper > ul > li {
+  margin: 0;
+  padding: 0;
+}
+.etl-nav .hs-menu-wrapper > ul > li > a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  display: block;
+  padding: 4px 0;
+  transition: opacity 0.2s ease;
+}
+.etl-nav .hs-menu-wrapper > ul > li > a:hover,
+.etl-nav .hs-menu-wrapper > ul > li > a:focus {
+  opacity: 0.7;
+}
+
+/* Nascondi eventuali frecce dropdown */
+.etl-nav .hs-menu-wrapper .hs-item-has-children > a::after {
+  display: none;
+}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.etl-hero {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #b01010; /* fallback se l'immagine non carica */
+}
+
+.etl-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--etl-hero-bg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.etl-hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 80px 40px 80px; /* 80px top per non finire sotto il nav */
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Il modulo rich_text HubSpot eredita questi stili */
+.etl-hero__content h1,
+.etl-hero__content .etl-hero__title {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: clamp(36px, 6vw, 78px);
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .etl-nav__inner       { padding: 0 20px; }
+  .etl-nav .hs-menu-wrapper > ul { gap: 16px; }
+  .etl-nav .hs-menu-wrapper > ul > li > a { font-size: 13px; }
+  .etl-hero             { min-height: 360px; }
+}
+
+@media (max-width: 640px) {
+  .etl-nav .hs-menu-wrapper { display: none; } /* menu mobile: da implementare */
+  .etl-hero__content    { padding: 80px 20px 60px; }
+}
+
+</style>
+
+<!-- ════════════════════════════════════════════════════════
+     MARKUP HTML
+════════════════════════════════════════════════════════ -->
+<div class="etl-s1">
+  <header style="position:relative;">
+
+    <!-- ── NAVIGAZIONE ── -->
+    <nav class="etl-nav" role="navigation" aria-label="Menu principale">
+      <div class="etl-nav__inner">
+
+        <!-- Logo (sinistra) -->
+        <div class="etl-nav__logo">
+          <a href="/" aria-label="ETL Italia – Home">
+            <img src="{{ logo_url }}" alt="ETL Italia" loading="eager">
+          </a>
+        </div>
+
+        <!-- Menu (destra) – modulo HubSpot gestibile da Impostazioni → Navigazione -->
+        {% module "etl_main_nav"
+           path="@hubspot/menu"
+           label="Menu principale"
+           menu_tree=[
+             {"label": "Chi siamo",            "url": "#chi-siamo",     "children": []},
+             {"label": "Vantaggi",              "url": "#vantaggi",      "children": []},
+             {"label": "Il gruppo",             "url": "#il-gruppo",     "children": []},
+             {"label": "Il network in Italia",  "url": "#network",       "children": []},
+             {"label": "Servizi",               "url": "#servizi",       "children": []},
+             {"label": "Contatti",              "url": "#contatti",      "children": []}
+           ]
+        %}{% end_module %}
+
+      </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <div class="etl-hero"
+         style="--etl-hero-bg: url('{{ hero_url }}');">
+      <div class="etl-hero__bg" aria-hidden="true"></div>
+      <div class="etl-hero__content">
+
+        <!-- Testo hero – editabile dal Page Editor HubSpot -->
+        {% module "etl_hero_title"
+           path="@hubspot/rich_text"
+           label="Testo Hero"
+           html="<h1 class='etl-hero__title'>Shaping the future</h1>"
+        %}{% end_module %}
+
+      </div>
+    </div>
+
+  </header>
+</div>
