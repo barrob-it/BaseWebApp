@@ -40,22 +40,32 @@ const IMG_FORMAT    = 'png';
 
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
+const TIMEOUT_MS = 30000; // 30 secondi max per ogni richiesta
+
 // ─── HTTP ─────────────────────────────────────────────────────────────────────
 function httpGet(url, headers = {}) {
   return new Promise((resolve, reject) => {
-    const mod = new URL(url).protocol === 'https:' ? https : http;
-    mod.get(url, { headers }, res => {
-      if (res.statusCode >= 301 && res.statusCode <= 303 && res.headers.location)
-        return httpGet(res.headers.location, headers).then(resolve).catch(reject);
-      const chunks = [];
-      res.on('data', c => chunks.push(c));
-      res.on('end', () => {
-        const body = Buffer.concat(chunks);
-        if (res.statusCode >= 400)
-          return reject(new Error(`GET ${url} → ${res.statusCode}: ${body.toString().slice(0,300)}`));
-        resolve({ status: res.statusCode, body, text: body.toString() });
+    const parsed = new URL(url);
+    const mod    = parsed.protocol === 'https:' ? https : http;
+    const req    = mod.request(
+      { hostname: parsed.hostname, port: parsed.port || 443,
+        path: parsed.pathname + parsed.search, method: 'GET',
+        headers, timeout: TIMEOUT_MS },
+      res => {
+        if (res.statusCode >= 301 && res.statusCode <= 303 && res.headers.location)
+          return httpGet(res.headers.location, headers).then(resolve).catch(reject);
+        const chunks = [];
+        res.on('data', c => chunks.push(c));
+        res.on('end', () => {
+          const body = Buffer.concat(chunks);
+          if (res.statusCode >= 400)
+            return reject(new Error(`GET ${url} → ${res.statusCode}: ${body.toString().slice(0,300)}`));
+          resolve({ status: res.statusCode, body, text: body.toString() });
+        });
       });
-    }).on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error(`Timeout (${TIMEOUT_MS/1000}s): ${url}`)); });
+    req.on('error', reject);
+    req.end();
   });
 }
 
@@ -112,9 +122,9 @@ async function figmaGet(endpoint) {
 }
 
 async function getFrameDeep() {
-  console.log('📐 Recupero struttura Figma (depth 8)...');
-  // Fetch con depth elevato per avere tutto l'albero
-  const data = await figmaGet(`/files/${FIGMA_FILE_ID}/nodes?ids=${encodeURIComponent(FIGMA_NODE_ID)}&geometry=paths`);
+  console.log('📐 Recupero struttura Figma...');
+  // Senza geometry=paths: evita di scaricare i path SVG (file enorme)
+  const data = await figmaGet(`/files/${FIGMA_FILE_ID}/nodes?ids=${encodeURIComponent(FIGMA_NODE_ID)}`);
   const nodeKey = Object.keys(data.nodes)[0];
   return data.nodes[nodeKey].document;
 }
